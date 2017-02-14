@@ -1,0 +1,24 @@
+{
+  "name": "Naver Content Counter",
+  "version": "0.1",
+  "description": "네이버 까페글과 블로그글의 이미지, 동영상, 검색어 일치수 등을 보여주는 크롬익스텐션입니다.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ],
+  "manifest_version": 2
+}
