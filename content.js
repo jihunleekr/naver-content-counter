@@ -4,7 +4,7 @@ var imageCount, movieCount, wordList, wordName, wordCount;
 if(location.href.match(/cafe/) && document.getElementById('basisElement')) { // 까페
   div = window.parent.document.createElement('div');
   window.parent.document.body.appendChild(div);
-  imageCount = document.querySelectorAll('.inbox img[src^="http://cafep"]').length;
+  imageCount = document.querySelectorAll('.inbox img[src^="http://cafep"], .inbox img[src^="http://postfiles"]').length;
   movieCount = document.querySelectorAll('.inbox iframe[src^="http://serviceapi"]').length;
   wordCount = 0;
   chrome.storage.local.get('lastQuery', function(items) {
