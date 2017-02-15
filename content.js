@@ -19,9 +19,9 @@ if(location.href.match(/cafe/) && document.getElementById('basisElement')) { // 
   div = document.createElement('div');
   document.body.appendChild(div);
   imageCount = document.querySelectorAll('[id^="post-view"] img[src^="http://postfiles"]').length;
-  movieCount = document.querySelectorAll('[id^="post-view"] iframe[src^="http://serviceapi"]').length;
+  movieCount = document.querySelectorAll('[id^="post-view"] iframe[src^="http://serviceapi"], [id^="post-view"] iframe[src^="https://www.youtube.com"]').length;
   setTimeout(function() {
-    movieCount = document.querySelectorAll('[id^="post-view"] iframe[src^="http://serviceapi"]').length;
+    movieCount = document.querySelectorAll('[id^="post-view"] iframe[src^="http://serviceapi"], [id^="post-view"] iframe[src^="https://www.youtube.com"]').length;
     document.getElementById('ncc-movie-count').innerHTML = movieCount;
   }, 1000);
   wordCount = 0;
